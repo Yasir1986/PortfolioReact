@@ -1,0 +1,47 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary-clr: #58e0bb;
+  --color-secondary-clr: #121b21;
+  --color-bgClr: #0e1419;
+
+  /* Typographey */
+  --font-dmSans: "DM Sans", sans-serif;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-bgClr text-white font-dmSans;
+}
+
+@layer utilities {
+  .container {
+    @apply px-4 mx-auto  md:px-8 lg:px-12 2xl:max-w-screen-xl;
+  }
+  p {
+    @apply text-sm sm:text-base md:text-lg text-neutral-400;
+  }
+  .section {
+    @apply py-28 lg:py-36;
+  }
+  h2 {
+    @apply text-2xl  lg:text-4xl font-semibold;
+  }
+  .input {
+    @apply h-12 w-full border border-neutral-800 indent-4 py-2;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+
+/* Header */
+.header {
+  @apply fixed top-0 left-0 py-5 w-full z-30;
+}
