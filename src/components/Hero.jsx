@@ -1,20 +1,25 @@
 import React from "react";
 import { heroIcons } from "../constant/data";
+import { BackgroundGradient } from "../components/ui/BackgroundGradient";
 import Button from "./Button";
 
 const Hero = () => {
   return (
     <section className="py-28 lg:pt-40">
-      <div className="container flex flex-col items-counter">
+      <div className="container flex flex-col items-center">
         {/*  image */}
-        <figure className="rounded-full overflow-hidden flex justify-center">
-          <img
-            src="/images/hero-img.png"
-            alt="Yasir Akbar"
-            height={452}
-            width={452}
-          />
-        </figure>
+        <BackgroundGradient
+          containerClassName="w-72 h-72 lg:w-80 lg:h-80 rounded-full"
+          className="w-full h-full rounded-full bg-zinc-900"
+        >
+          <figure className="rounded-full overflow-hidden">
+            <img
+              src="/images/hero-img.png"
+              alt="Yasir Akbar"
+              className="w-full h-full object-cover"
+            />
+          </figure>
+        </BackgroundGradient>
         {/*   content */}
         <div className="text-center mt-8">
           <h1 className="text-3xl lg:text-5xl mb-1.5 font-bold">
@@ -29,7 +34,6 @@ const Hero = () => {
             into scalable, user-centric applications that drive meaningful
             engagement.
           </p>
-
           <div className="flex items-center justify-center gap-5">
             {heroIcons.map((item) => (
               <a
@@ -41,7 +45,6 @@ const Hero = () => {
               </a>
             ))}
           </div>
-
           {/* btn wrapper */}
           <div
             className="mt-10 flex items-center justify-center 
