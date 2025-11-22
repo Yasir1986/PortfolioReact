@@ -57,3 +57,6 @@ body {
 .header {
   @apply fixed top-0 left-0 py-5 w-full z-30;
 }
+.header.active {
+  @apply bg-secondary-clr shadow-xs shadow-white/15;
+}

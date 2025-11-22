@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel } from "./ui/carousel";
+import { Carousel } from "./ui/Carousel";
 import { ProjectsItems } from "../constant/data";
 
 const Projects = () => {
