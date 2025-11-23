@@ -7,8 +7,8 @@ const Header = () => {
   const headerRef = useRef(null);
 
   const handleLinkClick = (id) => {
-    setActiveLink(id);
     setIsOpen(false);
+    setActiveLink(id);
   };
 
   useEffect(() => {
