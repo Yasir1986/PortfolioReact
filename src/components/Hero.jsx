@@ -2,39 +2,59 @@ import React from "react";
 import { heroIcons } from "../constant/data";
 import { BackgroundGradient } from "../components/ui/BackgroundGradient";
 import Button from "./Button";
+// motion
+import { motion } from "framer-motion";
+import { staggerContainer, fadeIn, fadeInUp } from "../motion/animation";
 
 const Hero = () => {
   return (
-    <section className="py-28 lg:pt-40">
-      <div className="container flex flex-col items-center">
+    <section className="py-28 lg:pt-40" id="home">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="container flex flex-col items-center"
+      >
         {/*  image */}
-        <BackgroundGradient
-          containerClassName="w-72 h-72 lg:w-80 lg:h-80 rounded-full"
-          className="w-full h-full rounded-full bg-zinc-900"
-        >
-          <figure className="rounded-full overflow-hidden">
-            <img
-              src="/images/hero-img.png"
-              alt="Yasir Akbar"
-              className="w-full h-full object-cover"
-            />
-          </figure>
-        </BackgroundGradient>
+        <motion.div variants={fadeIn}>
+          <BackgroundGradient
+            containerClassName="w-72 h-72 lg:w-80 lg:h-80 rounded-full"
+            className="w-full h-full rounded-full bg-zinc-900"
+          >
+            <figure className="rounded-full overflow-hidden">
+              <img
+                src="/images/hero-img.png"
+                alt="Yasir Akbar"
+                className="w-full h-full object-cover"
+              />
+            </figure>
+          </BackgroundGradient>
+        </motion.div>
         {/*   content */}
         <div className="text-center mt-8">
-          <h1 className="text-3xl lg:text-5xl mb-1.5 font-bold">
+          <motion.h1
+            variants={fadeIn}
+            className="text-3xl lg:text-5xl mb-1.5 font-bold"
+          >
             Hi, I am Yasir Akbar
-          </h1>
-          <h2>Senior Frontend Developer</h2>
-          <p className="max-w-[820px] mx-auto mt-4 mb-6">
+          </motion.h1>
+          <motion.h2 variants={fadeIn}>Senior Frontend Developer</motion.h2>
+          <motion.p
+            variants={fadeIn}
+            className="max-w-[820px] mx-auto mt-4 mb-6"
+          >
             I'm Yasir Akbar, a frontend developer who architects seamless
             digital experiences through innovative code and intuitive design.
             With expertise in cutting-edge technologies and a passion for
             performance optimization, I transform complex business requirements
             into scalable, user-centric applications that drive meaningful
             engagement.
-          </p>
-          <div className="flex items-center justify-center gap-5">
+          </motion.p>
+          <motion.div
+            variants={fadeIn}
+            className="flex items-center justify-center gap-5"
+          >
             {heroIcons.map((item) => (
               <a
                 href="#"
@@ -44,17 +64,18 @@ const Hero = () => {
                 <item.icon size={30} />
               </a>
             ))}
-          </div>
+          </motion.div>
           {/* btn wrapper */}
-          <div
+          <motion.div
+            variants={fadeIn}
             className="mt-10 flex items-center justify-center 
-        flex-wrap gap-5"
+          flex-wrap gap-5"
           >
             <Button label="Download CV" classes="primary-btn" icon />
             <Button label="Let's Collaborate" classes="secondary-btn" />
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

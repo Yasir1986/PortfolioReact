@@ -4,10 +4,10 @@ import { ProjectsItems } from "../constant/data";
 
 const Projects = () => {
   return (
-    <section>
+    <section id="projects">
       <div className="container">
         {/* Title */}
-        <h2>Recent Projects</h2>
+        <h2 className="text-center">Recent Projects</h2>
         {/* Card Wrapper */}
         <div className="relative overflow-hidden w-full h-full py-20">
           <Carousel slides={ProjectsItems} />

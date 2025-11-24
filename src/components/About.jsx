@@ -1,13 +1,22 @@
 import React from "react";
 import { aboutItems } from "../constant/data";
-import { li } from "motion/react-client";
+
+// motion
+import { motion } from "framer-motion";
+import { staggerContainer, fadeIn } from "../motion/animation";
 
 const About = () => {
   return (
-    <section className="section bg-secondary-clr">
-      <div className="container">
-        <h2>About me</h2>
-        <p className="mt-3 mb-9">
+    <section className="section bg-secondary-clr" id="about">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="container"
+      >
+        <motion.h2 variants={fadeIn}>About me</motion.h2>
+        <motion.p variants={fadeIn} className="mt-3 mb-9">
           I'm a frontend developer with 7+ years of experience building scalable
           web applications. I specialize in React, Redux, TypeScript,
           JaveScript, Nextjs, Nx and modern CSS frameworks to deliver
@@ -17,19 +26,19 @@ const About = () => {
           accessible user experiences. Currently working with UK biggest fashion
           e-commerce brands to transform ideas into production-ready
           applications.
-        </p>
+        </motion.p>
         {/* skills */}
         <div>
-            <p>Skills:</p>
-            <ul className="text-white font-semibold text-x1 mb-3">
-                {aboutItems.map((item) => (
-                    <li key={item.id}>
-                        <p>✅ {item.label}</p>
-                    </li>
-                ))}
-            </ul>
+          <motion.p variants={fadeIn}>Skills:</motion.p>
+          <motion.ul variants={fadeIn} className="text-white font-semibold text-x1 mb-3">
+            {aboutItems.map((item) => (
+              <li key={item.id}>
+                <p>✅ {item.label}</p>
+              </li>
+            ))}
+          </motion.ul>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
