@@ -196,7 +196,7 @@ export const ProjectsItems = [
   },
   {
     id: 2,
-    title: "Porfolio 2",
+    title: "Music Store Website",
     src: "/images/portfolio-2.png",
     text: "Music store website built with React, Redux toolkit and Tailwind CSS",
     href: "https://statuesque-daffodil-7af645.netlify.app/",
@@ -210,14 +210,14 @@ export const ProjectsItems = [
   },
   {
     id: 4,
-    title: "Porfolio 4",
+    title: "Ping Pong Game",
     src: "/images/portfolio-4.png",
     text: "Simple and elegant ping pong game built with vanilla JavaScript, html and Css. Paddle can be controlled with mouse",
     href: "https://zealous-wescoff-f97845.netlify.app/",
   },
   {
     id: 5,
-    title: "Porfolio",
+    title: "Porfolio website",
     src: "/images/portfolio-5.png",
     text: "Portfolio website built with React.js, Html & CSS",
     href: "https://inquisitive-bubblegum-e18eba.netlify.app/",
