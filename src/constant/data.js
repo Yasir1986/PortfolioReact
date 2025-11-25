@@ -128,7 +128,7 @@ export const ResumeItems = [
     title: "Experience",
     list: [
       {
-        role: "React Frontend Developer",
+        role: "React Developer",
         label: "Nbrown",
         location: "Manchester, UK",
         time: "Feb 2022 - Present",

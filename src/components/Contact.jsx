@@ -20,8 +20,8 @@ const Contact = () => {
         <div>
           <motion.h2 variants={fadeInUp}>Get in touch</motion.h2>
           <motion.p variants={fadeInUp} className="mt-3.5 mb-7">
-            Ready to work on your next project. Let's discuss how I can help
-            bring your ideas to life
+            I'm currently open to new opportunities. Whether you have a
+            question or just want to say hi, feel free to drop a message!
           </motion.p>
           {/* List */}
           <motion.ul variants={fadeInUp}>
