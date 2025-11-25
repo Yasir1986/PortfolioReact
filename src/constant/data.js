@@ -178,7 +178,7 @@ export const ResumeItems = [
         time: "2018",
       },
       {
-        label: "Kajaani University of Applied Sciences, Finland",
+        label: "Kajaani University, Finland",
         role: "BBA in International Business",
         time: "2012",
       },
