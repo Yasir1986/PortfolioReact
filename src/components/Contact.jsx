@@ -37,12 +37,24 @@ const Contact = () => {
             variants={fadeIn}
             className="flex items-center gap-2 mt-6"
           >
-            <button className="hover:text-neutral-300 transition-colors">
-              <RiLinkedinBoxFill size={30} />
-            </button>
-            <button className="hover:text-neutral-300 transition-colors">
-              <RiGithubFill size={30} />
-            </button>
+            <a
+              href="https://www.linkedin.com/in/yasir-akbar-2b534513b/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="hover:text-neutral-300 transition-colors">
+                <RiLinkedinBoxFill size={30} />
+              </button>
+            </a>
+            <a
+              href="https://github.com/Yasir1986"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="hover:text-neutral-300 transition-colors">
+                <RiGithubFill size={30} />
+              </button>
+            </a>
           </motion.div>
         </div>
         {/* Form */}

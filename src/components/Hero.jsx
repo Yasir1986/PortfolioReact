@@ -39,17 +39,22 @@ const Hero = () => {
           >
             Hi, I am Yasir Akbar
           </motion.h1>
-          <motion.h2 variants={fadeInUp}>Senior Frontend Developer</motion.h2>
+          <motion.h2 variants={fadeInUp}>
+            Senior Frontend / Software Developer
+          </motion.h2>
           <motion.p
             variants={fadeInUp}
             className="max-w-[820px] mx-auto mt-4 mb-6"
           >
-            I'm Yasir Akbar, a frontend developer who architects seamless
-            digital experiences through innovative code and intuitive design.
-            With expertise in cutting-edge technologies and a passion for
-            performance optimization, I transform complex business requirements
-            into scalable, user-centric applications that drive meaningful
-            engagement.
+            Hi, I’m Yasir Akbar Senior Frontend Developer & Software Engineer
+            With 7+ years of experience, I build seamless, high-performance
+            interfaces that blend elegant design with strong engineering
+            principles. I excel at turning complex business requirements into
+            scalable, user-focused applications using modern frontend ecosystems
+            and best-practice development workflows. I’ve also worked on one of
+            the largest fashion e-commerce platforms in the UK, delivering
+            robust, high-traffic, and performance-driven user experiences at
+            scale.
           </motion.p>
           <motion.div
             variants={fadeIn}
@@ -57,8 +62,10 @@ const Hero = () => {
           >
             {heroIcons.map((item) => (
               <a
-                href="#"
+                key={item.id}
+                href={item.href}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-indigo-400 transition-colors"
               >
                 <item.icon size={30} />
@@ -71,8 +78,12 @@ const Hero = () => {
             className="mt-10 flex items-center justify-center 
           flex-wrap gap-5"
           >
-            <Button label="Download CV" classes="primary-btn" icon />
-            <Button label="Let's Collaborate" classes="secondary-btn" />
+            <a href="/YasirAkbar_CV.pdf" alt="Download CV" download>
+              <Button label="Download CV" classes="primary-btn" icon />
+            </a>
+            <a href="#contact">
+              <Button label="Let's Collaborate" classes="secondary-btn" />
+            </a>
           </motion.div>
         </div>
       </motion.div>

@@ -25,7 +25,7 @@ const Experience = () => {
             >
               {/*   Title */}
               <h3 className="text-2x1 font-semibold mt-8 pb-3">{item.title}</h3>
-              <div className="mt-10 space-y-8">
+              <div className="mt-10 space-y-9">
                 {/* List */}
                 {item.list.map((listItem, index) => (
                   <div
@@ -35,6 +35,7 @@ const Experience = () => {
                     <div>
                       <h4 className="text-xl">{listItem.role}</h4>
                       <p>{listItem.label}</p>
+                      <p>{listItem.location}</p>
                     </div>
                     <p className="border border-neutral-700 p-2.5 text-white">
                       {listItem.time}

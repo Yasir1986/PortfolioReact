@@ -103,7 +103,14 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
           <p className="bg-white/80 text-black p-3 rounded-lg">{text}</p>
           <div className="flex justify-center">
             <button className="mt-6  px-3 py-1.5 w-fit mx-auto sm:text-sm text-black bg-white hover:bg-white/80 h-12 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
-              <a href="#" target="_blank"></a>
+              <a
+                href={slide.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-1 font-semibold"
+              >
+                View Live deploy
+              </a>
               <RiArrowRightUpLongLine />
             </button>
           </div>
