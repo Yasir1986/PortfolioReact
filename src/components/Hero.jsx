@@ -39,9 +39,9 @@ const Hero = () => {
           >
             Hi, I am Yasir Akbar
           </motion.h1>
-          <motion.h2 variants={fadeIn}>Senior Frontend Developer</motion.h2>
+          <motion.h2 variants={fadeInUp}>Senior Frontend Developer</motion.h2>
           <motion.p
-            variants={fadeIn}
+            variants={fadeInUp}
             className="max-w-[820px] mx-auto mt-4 mb-6"
           >
             I'm Yasir Akbar, a frontend developer who architects seamless
@@ -67,7 +67,7 @@ const Hero = () => {
           </motion.div>
           {/* btn wrapper */}
           <motion.div
-            variants={fadeIn}
+            variants={fadeInUp}
             className="mt-10 flex items-center justify-center 
           flex-wrap gap-5"
           >

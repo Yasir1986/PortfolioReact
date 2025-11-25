@@ -1,9 +1,8 @@
 import React from "react";
 import { aboutItems } from "../constant/data";
-
 // motion
 import { motion } from "framer-motion";
-import { staggerContainer, fadeIn } from "../motion/animation";
+import { staggerContainer, fadeIn, fadeInUp } from "../motion/animation";
 
 const About = () => {
   return (
@@ -15,8 +14,8 @@ const About = () => {
         viewport={{ once: true }}
         className="container"
       >
-        <motion.h2 variants={fadeIn}>About me</motion.h2>
-        <motion.p variants={fadeIn} className="mt-3 mb-9">
+        <motion.h2 variants={fadeInUp}>About me</motion.h2>
+        <motion.p variants={fadeInUp} className="mt-3 mb-9">
           I'm a frontend developer with 7+ years of experience building scalable
           web applications. I specialize in React, Redux, TypeScript,
           JaveScript, Nextjs, Nx and modern CSS frameworks to deliver
@@ -29,8 +28,8 @@ const About = () => {
         </motion.p>
         {/* skills */}
         <div>
-          <motion.p variants={fadeIn}>Skills:</motion.p>
-          <motion.ul variants={fadeIn} className="text-white font-semibold text-x1 mb-3">
+          <motion.p variants={fadeInUp}>Skills:</motion.p>
+          <motion.ul variants={fadeIn}>
             {aboutItems.map((item) => (
               <li key={item.id}>
                 <p>✅ {item.label}</p>

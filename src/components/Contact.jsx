@@ -1,42 +1,52 @@
 import React from "react";
 import { contactItems } from "../constant/data";
 import { RiGithubFill, RiLinkedinBoxFill } from "@remixicon/react";
+// motion
+import { motion } from "framer-motion";
+import { staggerContainer, fadeIn, fadeInUp } from "../motion/animation";
 
 const Contact = () => {
   return (
     <section className="py-20" id="contact">
-      <div
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
         className="container grid gap-10 md:grid-cols-2 
-      md:divide-x md:divide-neutral-800"
+        md:divide-x md:divide-neutral-800"
       >
         {/* content */}
         <div>
-          <h2>Get in touch</h2>
-          <p className="mt-3.5 mb-7">
+          <motion.h2 variants={fadeInUp}>Get in touch</motion.h2>
+          <motion.p variants={fadeInUp} className="mt-3.5 mb-7">
             Ready to work on your next project. Let's discuss how I can help
             bring your ideas to life
-          </p>
+          </motion.p>
           {/* List */}
-          <ul>
+          <motion.ul variants={fadeInUp}>
             {contactItems.map((item) => (
               <li key={item.id} className="flex items-center gap-1.5">
                 <p className="text-white font-semibold">{item.label}</p>
                 <a href="#">{item.link}</a>
               </li>
             ))}
-          </ul>
+          </motion.ul>
           {/*   Social Profiles */}
-          <div className="flex items-center gap-2 mt-6">
+          <motion.div
+            variants={fadeIn}
+            className="flex items-center gap-2 mt-6"
+          >
             <button className="hover:text-neutral-300 transition-colors">
               <RiLinkedinBoxFill size={30} />
             </button>
             <button className="hover:text-neutral-300 transition-colors">
               <RiGithubFill size={30} />
             </button>
-          </div>
+          </motion.div>
         </div>
         {/* Form */}
-        <form action="" className="grid gap-5">
+        <motion.form variants={fadeIn} action="" className="grid gap-5">
           {/* Input field */}
           <div className="grid gap-2">
             <label htmlFor="name">Name *</label>
@@ -68,8 +78,8 @@ const Contact = () => {
             />
           </div>
           <button className="primary-btn max-w-max">Send Message</button>
-        </form>
-      </div>
+        </motion.form>
+      </motion.div>
     </section>
   );
 };
