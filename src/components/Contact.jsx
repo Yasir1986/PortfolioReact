@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { contactItems } from "../constant/data";
 import { RiGithubFill, RiLinkedinBoxFill } from "@remixicon/react";
 // motion
@@ -6,6 +7,32 @@ import { motion } from "framer-motion";
 import { staggerContainer, fadeIn, fadeInUp } from "../motion/animation";
 
 const Contact = () => {
+  const form = useRef();
+  const [successMessage, setSuccessMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_tiutuer", // replace with your EmailJS service ID
+        "template_r9j3ywp", // replace with your EmailJS template ID
+        form.current,
+        "ABlmrF0xNUHlckvUz" // replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSuccessMessage("Message sent successfully!");
+          e.target.reset(); // clear form
+        },
+        (error) => {
+          console.log(error.text);
+          setSuccessMessage("Failed to send message. Please try again.");
+        }
+      );
+  };
+
   return (
     <section className="py-20" id="contact">
       <motion.div
@@ -13,17 +40,16 @@ const Contact = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="container grid gap-10 md:grid-cols-2 
-        md:divide-x md:divide-neutral-800"
+        className="container grid gap-10 md:grid-cols-2 md:divide-x md:divide-neutral-800"
       >
-        {/* content */}
+        {/* Left content */}
         <div>
           <motion.h2 variants={fadeInUp}>Get in touch</motion.h2>
           <motion.p variants={fadeInUp} className="mt-3.5 mb-7">
-            I'm currently open to new opportunities. Whether you have a
-            question or just want to say hi, feel free to drop a message!
+            I'm currently open to new opportunities. Whether you have a question
+            or just want to say hi, feel free to drop a message!
           </motion.p>
-          {/* List */}
+
           <motion.ul variants={fadeInUp}>
             {contactItems.map((item) => (
               <li key={item.id} className="flex items-center gap-1.5">
@@ -32,7 +58,7 @@ const Contact = () => {
               </li>
             ))}
           </motion.ul>
-          {/*   Social Profiles */}
+
           <motion.div
             variants={fadeIn}
             className="flex items-center gap-2 mt-6"
@@ -57,39 +83,55 @@ const Contact = () => {
             </a>
           </motion.div>
         </div>
-        {/* Form */}
-        <motion.form variants={fadeIn} action="" className="grid gap-5">
-          {/* Input field */}
+
+        {/* Contact Form */}
+        <motion.form
+          ref={form}
+          onSubmit={sendEmail}
+          variants={fadeIn}
+          className="grid gap-5"
+        >
           <div className="grid gap-2">
             <label htmlFor="name">Name *</label>
             <input
               type="text"
+              name="name"
               placeholder="Your name"
               className="input"
               required
             />
           </div>
-          {/* Input field */}
+
           <div className="grid gap-2">
             <label htmlFor="email">Email *</label>
             <input
-              type="text"
+              type="email"
+              name="email"
               placeholder="Your email"
               className="input"
               required
             />
           </div>
-          {/* Text area */}
+
           <div className="grid gap-2">
             <label htmlFor="message">Message *</label>
             <textarea
-              id="message"
+              name="message"
               placeholder="Message"
               className="h-40 border border-neutral-800 indent-4 py-2 resize-none"
               required
             />
           </div>
-          <button className="primary-btn max-w-max">Send Message</button>
+
+          <button className="primary-btn max-w-max" type="submit">
+            Send Message
+          </button>
+
+          {successMessage && (
+            <p className="mt-3 text-green-400 font-semibold">
+              {successMessage}
+            </p>
+          )}
         </motion.form>
       </motion.div>
     </section>
