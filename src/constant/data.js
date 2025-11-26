@@ -50,7 +50,7 @@ export const aboutItems = [
   // Frontend
   {
     id: 1,
-    label: "React & Next.js development",
+    label: "React & Next.js",
   },
   {
     id: 2,
@@ -203,7 +203,7 @@ export const ProjectsItems = [
   },
   {
     id: 3,
-    title: "Music Store Website",
+    title: "Music Store website",
     src: "/images/portfolio-2.png",
     text: "Music store website built with React, Redux toolkit and Tailwind CSS",
     href: "https://statuesque-daffodil-7af645.netlify.app/",
@@ -219,7 +219,7 @@ export const ProjectsItems = [
     id: 5,
     title: "Ping Pong Game",
     src: "/images/portfolio-4.png",
-    text: "Simple and elegant ping pong game built with vanilla JavaScript, html and Css. Paddle can be controlled with mouse",
+    text: "Simple and elegant ping pong game built with vanilla JavaScript, html and Css. Paddle can be controll with mouse",
     href: "https://zealous-wescoff-f97845.netlify.app/",
   },
   {
@@ -240,7 +240,7 @@ export const contactItems = [
   {
     id: 2,
     label: "Phone:",
-    link: "+44 7308 123456",
+    link: "+44 •••• ••••••",
   },
   {
     id: 3,

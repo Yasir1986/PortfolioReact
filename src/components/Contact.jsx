@@ -117,7 +117,7 @@ const Contact = () => {
             <label htmlFor="message">Message *</label>
             <textarea
               name="message"
-              placeholder="Message"
+              placeholder="Your message"
               className="h-40 border border-neutral-800 indent-4 py-2 resize-none"
               required
             />
