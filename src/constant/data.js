@@ -174,7 +174,7 @@ export const ResumeItems = [
       },
       {
         label: "Integrify Heslinki, Finland",
-        role: "Frontend Development Cousrse",
+        role: "Frontend Development Course",
         time: "2018",
       },
       {
