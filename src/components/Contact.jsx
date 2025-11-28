@@ -122,11 +122,9 @@ const Contact = () => {
               required
             />
           </div>
-
           <button className="primary-btn max-w-max" type="submit">
             Send Message
           </button>
-
           {successMessage && (
             <p className="mt-3 text-green-400 font-semibold">
               {successMessage}
