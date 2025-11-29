@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { contactItems } from "../constant/data";
 import { RiGithubFill, RiLinkedinBoxFill } from "@remixicon/react";
-// motion
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn, fadeInUp } from "../motion/animation";
 
