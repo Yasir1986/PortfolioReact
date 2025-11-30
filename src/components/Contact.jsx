@@ -57,7 +57,6 @@ const Contact = () => {
               </li>
             ))}
           </motion.ul>
-
           <motion.div
             variants={fadeIn}
             className="flex items-center gap-2 mt-6"
