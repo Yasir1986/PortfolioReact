@@ -81,7 +81,6 @@ const Contact = () => {
             </a>
           </motion.div>
         </div>
-
         {/* Contact Form */}
         <motion.form
           ref={form}
@@ -99,7 +98,6 @@ const Contact = () => {
               required
             />
           </div>
-
           <div className="grid gap-2">
             <label htmlFor="email">Email *</label>
             <input
