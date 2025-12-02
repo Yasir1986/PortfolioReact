@@ -1,7 +1,6 @@
 import React from "react";
 import { Carousel } from "./ui/Carousel";
 import { ProjectsItems } from "../constant/data";
-// motion
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn, fadeInUp } from "../motion/animation";
 
