@@ -47,7 +47,7 @@ const Hero = () => {
             className="max-w-[820px] mx-auto mt-4 mb-6"
           >
             Hi, I’m Yasir Akbar Senior Frontend Developer / Software Engineer
-            With 7+ years of experience, I build seamless, high-performance
+            With 10+ years of experience, I build seamless, high-performance
             interfaces that blend elegant design with strong engineering
             principles. I excel at turning complex business requirements into
             scalable, user-focused applications using modern frontend ecosystems
