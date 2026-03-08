@@ -16,7 +16,7 @@ const About = () => {
       >
         <motion.h2 variants={fadeInUp}>About me</motion.h2>
         <motion.p variants={fadeInUp} className="mt-3 mb-9">
-          I'm a frontend developer with 7+ years of experience building scalable
+          I'm a frontend developer with 10+ years of experience building scalable
           web applications. I specialize in React, Redux, TypeScript,
           JaveScript, Nextjs, Nx and modern CSS frameworks to deliver
           high-performance solutions. My expertise includes component
