@@ -1,12 +1,15 @@
-# React + Vite
+PortfolioReact
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Follow the steps to run this Portfolio
 
-Currently, two official plugins are available:
+1)git clone https://github.com/Yasir1986/PortfolioReact
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2)npm install
 
-## React Compiler
+3)npm start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Enjoy
+
+OR
+
+Live deploy link: https://jade-starlight-c1c7e6.netlify.app/
